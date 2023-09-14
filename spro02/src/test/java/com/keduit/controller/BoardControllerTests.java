@@ -44,6 +44,18 @@ public class BoardControllerTests {
 	}
 	
 	@Test
+	public void testListPaging() throws Exception {
+		//log에서 임의 서버가 만들어져서 브라우저 주소에 값이 들어갔을 때 상황을 보는 방법
+		log.info("mockMvc를 보고 싶다......"+
+				mockMvc.perform(MockMvcRequestBuilders.get("/board/list")
+						.param("pageNum", "5")
+						.param("amount", "10"))
+		.andReturn()
+		.getModelAndView()
+		.getModelMap());
+	}
+	
+	@Test
 	public void testRegister() throws Exception {
 		//페이지를 만들어서 param에 값을 담아서 보낸다.
 		String resultPage = mockMvc

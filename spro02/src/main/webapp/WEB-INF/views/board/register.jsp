@@ -18,16 +18,16 @@
 					<div class="col-lg-10">
 						<form action="/board/register" method="post">
 							<div class="form-group">
-								<label>제목을 입력하라 애송이</label> 
+								<label>제목을 입력해주세요</label> 
 								<input class="form-control"	placeholder="입력하세요!!" name="title">
 							</div>
 							<div class="form-group">
-								<label>내용이 무엇이냐</label>
+								<label>내용</label>
 								<textarea class="form-control" rows="5" style="resize: none;"
 									name="content" placeholder="입력하세요!!"></textarea>
 							</div>
 							<div class="form-group">
-								<label>네 이름이 무엇이냐!</label> 
+								<label>닉네임</label> 
 								<input class="form-control" placeholder="입력하세요!!" name="writer">
 							</div>
 							<button type="submit" class="btn btn-default">등록</button>

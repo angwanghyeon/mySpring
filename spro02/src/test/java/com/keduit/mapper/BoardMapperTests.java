@@ -1,5 +1,7 @@
 package com.keduit.mapper;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.keduit.domain.BoardVO;
+import com.keduit.domain.Criteria;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -26,12 +29,24 @@ public class BoardMapperTests {
 	}
 	
 	@Test
+	public void testGetListWithPaging() {
+		Criteria criteria = new Criteria();
+		criteria.setAmount(10);
+		criteria.setPageNum(7);
+		List<BoardVO> list = mapper.getListWithPaging(criteria);
+		list.forEach(board -> log.info(board));
+	}
+	
+	@Test
 	public void testInsert() {
 		BoardVO board = new BoardVO();
-		board.setTitle("insert test 코드를 통한 제목 입력");
-		board.setContent("insert test 코드를 통한 내용 입력");
-		board.setWriter("작성자는 괴물이다....");
-		mapper.insert(board);
+		for(int i=1; i<30; i++) {
+			board.setTitle("옥찌얌!!"+i);
+			board.setContent("빵빵이를 구독해주세요"+i);
+			board.setWriter("빵빵이"+i);
+			mapper.insert(board);
+			
+		}
 		
 		log.info(board);
 	}
@@ -73,5 +88,15 @@ public class BoardMapperTests {
 		int num = mapper.updateBoard(board);
 		
 		log.info("고치기가 성공한건가...."+num);
+	}
+	
+	@Test
+	public void testSearch() {
+		Criteria criteria = new Criteria();
+		criteria.setKeyword("중복");
+		criteria.setType("TC");
+		
+		List<BoardVO> list = mapper.getListWithPaging(criteria);
+		list.forEach(board -> log.info(board));
 	}
 }

@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.keduit.domain.BoardVO;
+import com.keduit.domain.Criteria;
 
 import lombok.extern.log4j.Log4j;
 
@@ -39,7 +40,9 @@ public class BoardServiceTests {
 	//리스트 뿌리기
 	@Test
 	public void testGetList() {
-		service.getList().forEach(board -> log.info(board));
+//		service.getList().forEach(board -> log.info(board));
+		service.getList(new Criteria(6,10)).forEach(board -> log.info(board));
+		
 	}
 	//이번엔 하나만 select
 	@Test

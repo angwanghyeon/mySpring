@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.keduit.domain.BoardVO;
+import com.keduit.domain.Criteria;
 import com.keduit.mapper.BoardMapper;
 
 import lombok.RequiredArgsConstructor;
@@ -56,9 +57,21 @@ public class BoardServiceImpl implements BoardService {
 		}
 	}
 
+//	@Override
+//	public List<BoardVO> getList() {
+//		return mapper.getList();
+//	}
 	@Override
-	public List<BoardVO> getList() {
-		return mapper.getList();
+	public List<BoardVO> getList(Criteria criteria) {
+		
+		return mapper.getListWithPaging(criteria);
+	}
+
+
+	@Override
+	public int getTotalCount(Criteria criteria) {
+			log.info("getTotalcount입니당 ><");
+		return mapper.getTotalCount(criteria);
 	}
 
 }

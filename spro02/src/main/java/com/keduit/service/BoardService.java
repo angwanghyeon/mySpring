@@ -3,6 +3,7 @@ package com.keduit.service;
 import java.util.List;
 
 import com.keduit.domain.BoardVO;
+import com.keduit.domain.Criteria;
 
 public interface BoardService {
 	
@@ -14,5 +15,10 @@ public interface BoardService {
 	
 	public boolean remove(long bno);
 	
-	public List<BoardVO> getList();
+//	public List<BoardVO> getList();
+	
+	public List<BoardVO> getList(Criteria criteria);
+	
+	public int getTotalCount(Criteria criteria);
+	
 }
