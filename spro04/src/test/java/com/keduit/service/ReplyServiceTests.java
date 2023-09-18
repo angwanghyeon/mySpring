@@ -32,6 +32,11 @@ public class ReplyServiceTests {
 		vo.setReply("서비스에서 작성한 답변");
 		vo.setReplyer("서비스에서 작성한 답변자");
 		vo.setBno(45L);
-		long rno = service.create(vo);
+		long rno = service.register(vo);
+	}
+	
+	@Test
+	public void testRead() {
+		
 	}
 }

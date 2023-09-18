@@ -23,7 +23,6 @@ public class ReplyMapperTests {
 	@Setter(onMethod_ = @Autowired)
 	private ReplyMapper mapper;
 	
-	
 
 	@Test
 	public void testMapper() {
@@ -51,7 +50,7 @@ public class ReplyMapperTests {
 
 	@Test
 	public void testUpdate() {
-		long rno = 3L;
+		long rno = 12L;
 		ReplyVO vo = new ReplyVO();
 		vo.setRno(rno);
 		vo.setReply("변경된 내용");
@@ -63,7 +62,7 @@ public class ReplyMapperTests {
 
 	@Test
 	public void testDelete() {
-		long rno = 2L;
+		long rno = 16L;
 		int result = mapper.delete(rno);
 		if (result > 0) {
 			log.info("여기는 딜리트 실행...");
@@ -79,5 +78,9 @@ public class ReplyMapperTests {
 		
 	}
 	
-	
+	@Test
+	public void testGetCountByBno() {
+		mapper.getCountByBno(45L);
+	}
+
 }
