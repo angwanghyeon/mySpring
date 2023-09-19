@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.keduit.domain.Criteria;
+import com.keduit.domain.ReplyPageDTO;
 import com.keduit.domain.ReplyVO;
 import com.keduit.service.ReplyService;
 
@@ -56,10 +57,11 @@ public class ReplyController {
 		return new ResponseEntity<ReplyVO>(replyService.read(rno), HttpStatus.OK);
 	}
 	
+	
 	@GetMapping(value = "/pages/{bno}/{page}",
 			produces = {MediaType.APPLICATION_XML_VALUE,
 					MediaType.APPLICATION_JSON_VALUE})
-	public ResponseEntity<List<ReplyVO>> getList(
+	public ResponseEntity<ReplyPageDTO> getList(
 			@PathVariable("page") int page,
 			@PathVariable("bno") Long bno
 			){
@@ -67,8 +69,9 @@ public class ReplyController {
 		log.info("getList에서 읽어온 두가지 값을 봐봅시다 page : "+page+" bno : "+bno);
 		Criteria criteria = new Criteria(page, 10);
 		log.info("criteria 내가 만든거......"+criteria);
-		return new ResponseEntity<List<ReplyVO>>(replyService.getList(criteria, bno), HttpStatus.OK);
+		return new ResponseEntity<ReplyPageDTO>(replyService.getListPage(criteria, bno), HttpStatus.OK);
 	}
+	
 	
 	@DeleteMapping(value = "/{rno}",
 			produces = {MediaType.TEXT_PLAIN_VALUE})
@@ -95,4 +98,6 @@ public class ReplyController {
 		return replyService.modify(vo) ? new ResponseEntity<String>("success", HttpStatus.OK)
 				: new ResponseEntity<String>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
+	
+	
 }
