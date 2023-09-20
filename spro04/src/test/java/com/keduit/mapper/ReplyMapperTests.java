@@ -31,9 +31,9 @@ public class ReplyMapperTests {
 
 	@Test
 	public void testCreate() {
-		IntStream.range(1, 10).forEach(i -> {
+		IntStream.range(1, 100).forEach(i -> {
 			ReplyVO vo = new ReplyVO();
-			vo.setBno((i + 60L));
+			vo.setBno((201L));
 			vo.setReply("답변 내용" + i);
 			vo.setReplyer("답변 작성자" + i);
 			mapper.insert(vo);

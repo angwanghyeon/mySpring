@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57cbd279-cd15-4b61-98be-d9f81a78f77f" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../spro05/src/main/java/com/keduit/mapper/Sample1Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spro05/src/main/java/com/keduit/mapper/Sample2Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spro05/src/main/java/com/keduit/service/SampleTxService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spro05/src/main/java/com/keduit/service/SampleTxServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spro05/src/test/java/com/keduit/service/SampleServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Servers/Tomcat v9.0 Server at localhost-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Servers/Tomcat v9.0 Server at localhost-config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/domain/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/domain/BoardVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/mapper/BoardMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/mapper/ReplyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/mapper/ReplyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/service/ReplyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/java/com/keduit/service/ReplyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/resources/com/keduit/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/resources/com/keduit/mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/src/test/java/com/keduit/mapper/ReplyMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/src/test/java/com/keduit/mapper/ReplyMapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/controller/ReplyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/controller/ReplyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/domain/BoardVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/domain/BoardVO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/mapper/BoardMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/mapper/BoardMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/mapper/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/mapper/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/service/ReplyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/classes/com/keduit/service/ReplyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/m2e-wtp/web-resources/META-INF/maven/com.keduit/controller/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/m2e-wtp/web-resources/META-INF/maven/com.keduit/controller/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/m2e-wtp/web-resources/META-INF/maven/com.keduit/controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/m2e-wtp/web-resources/META-INF/maven/com.keduit/controller/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro04/target/test-classes/com/keduit/mapper/ReplyMapperTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spro04/target/test-classes/com/keduit/mapper/ReplyMapperTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spro05/src/test/java/com/keduit/service/SampleServiceTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2VePaJXO754jeRwAE1FS8FRPsEh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "pang",
+    "ignore.virus.scanning.warn.message": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="SpringDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="springDemo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.keduit.SpringDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="57cbd279-cd15-4b61-98be-d9f81a78f77f" name="변경" comment="" />
+      <created>1695193637713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695193637713</updated>
+      <workItem from="1695193638718" duration="153000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

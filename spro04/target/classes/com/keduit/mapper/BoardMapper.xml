@@ -30,11 +30,12 @@
 
 	<select id="getListWithPaging"
 		resultType="com.keduit.domain.BoardVO">
-		select bno, title, content, writer, regdate, updatedate
+		select bno, title, content, writer, regdate, updatedate, replyCnt
 		from
 		(select /*+ index_desc(board pk_board) */
 		rownum rn, bno, title,
-		content, writer, regdate, updatedate
+		content, writer, regdate, updatedate,
+		replyCnt
 		from board
 		where
 		<include refid="criteria"></include>
@@ -87,5 +88,9 @@
 		where bno = #{bno}
 	</update>
 
+	<update id="updateReplyCnt">
+		update board set replyCnt = replycnt + #{amount}
+		where bno = #{bno}
+	</update>
 
 </mapper>

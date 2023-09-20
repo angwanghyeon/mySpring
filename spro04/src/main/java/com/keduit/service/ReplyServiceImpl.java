@@ -35,6 +35,7 @@ public class ReplyServiceImpl implements ReplyService {
 	@Override
 	public long register(ReplyVO reply) {
 		log.info("현재 위치는 register 문입니당");
+		boardMapper.updateReplyCnt(reply.getBno(), 1);
 		return replyMapper.insert(reply);
 	}
 
@@ -53,7 +54,10 @@ public class ReplyServiceImpl implements ReplyService {
 	@Transactional
 	@Override
 	public boolean remove(long rno) {
+		log.info("--------remove imple........");
+		ReplyVO vo = replyMapper.read(rno);
 		int result = replyMapper.delete(rno);
+		boardMapper.updateReplyCnt(vo.getBno(), -1);
 		return (result > 0) ? true : false;
 	}
 
@@ -72,5 +76,7 @@ public class ReplyServiceImpl implements ReplyService {
 				replyMapper.getCountByBno(bno), 
 				replyMapper.getListWithPaging(criteria, bno));
 	}
+
+
 
 }

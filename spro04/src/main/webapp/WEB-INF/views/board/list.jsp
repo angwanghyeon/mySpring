@@ -41,7 +41,9 @@
 											<span style="color: red;">new!</span>
 										</c:if>
 								</a></td>
-								<td><c:out value="${board.writer}"></c:out></td>
+								<td><c:out value="${board.writer}"></c:out>
+								<b>${board.replyCnt}</b>
+								</td>
 								<td class="center"><fmt:formatDate
 										pattern="yyyy-MM-dd / hh:mm:ss" value="${board.regdate}" /></td>
 								<td class="center"><fmt:formatDate
