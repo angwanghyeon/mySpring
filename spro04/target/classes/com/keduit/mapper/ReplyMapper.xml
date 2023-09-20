@@ -32,7 +32,7 @@
 		where 
 		bno = #{bno} and rno > 0
 		and rownum <= #{criteria.pageNum} * #{criteria.amount})
-		where rn > (#{criteria.pageNum}-1) * #{criteria.amount} 
+		where rn > ( #{criteria.pageNum} -1) * #{criteria.amount} 
   	]]>
   	</select>
   	

@@ -82,6 +82,7 @@
 			<div class="panel-body">
 				<ul class="chat list-group">
 				</ul>
+				
 			</div>
 			<!-- 댓글 페이징 처리 -->
 			<div class="panel-footer">
@@ -146,6 +147,8 @@
 		if(page == -1){
 			pageNum = Math.ceil(replyCnt / 10.0);
 			showList(pageNum);
+			console.log(pageNum);
+			console.log(page);
 			return;
 		}
 	let str = "";
@@ -186,7 +189,7 @@
 		if(prev){
 			str += "<li class='page-item'><a class='page-link' href='"+(startNum -1)+"'> 이전</a></li>";
 		}
-		for(let i=startNum; i<endNum; i++){
+		for(let i=startNum; i<=endNum; i++){
 			const active = pageNum == i ? "active" : "";
 			str += "<li class='page-item "+active+"'><a class='page-link' href='"+i+"'>"+i+"</a></li>"
 		}
@@ -199,7 +202,15 @@
 		console.log(str);
 		replyPageFooter.html(str);
 	}
-	
+	//댓글 페이지 버튼 눌렀을 때 제대로 동작하게 만들기
+	replyPageFooter.on("click", "li a", function(e){
+		e.preventDefault();
+		console.log("...........pageNumber click 햇을때........");
+		const targetPage = $(this).attr("href");
+		console.log("너 지금 뭐여 : ",targetPage);
+		pageNum = targetPage;
+		showList(pageNum);
+	})
 	
 	const modal = $("#myModal");
 	const modalInputReply = modal.find("input[name='reply']");
@@ -213,11 +224,14 @@
 	$("#addReplyBtn").on("click", function(e){
 		
 		modal.find("input").val("");
+		//removeAttr로 우리가 지정한 속성을 제거한다.
 		modalInputReplyer.removeAttr("readonly");
+		//closest는 가장 가까운 상위를 의미함
 		modalInputReplyDate.closest("div").hide();
 		modal.find("button[id !='modalCloBtn']").hide();
 		modalRegBtn.show();
 		$(".modal").modal("show");
+		//id값이 라벨인 녀석은 .html은 안에 text를 의미함 그 텍스트를 바꾸라는 의미
 		$("#myModalLabel").html("댓글 작성");
 	});
 	
@@ -250,7 +264,7 @@
 			bno:bnoValue
 		}
 		replyService.add(reply,	function(result){
-			alert("댓글 동록에 성공하였습니당");	
+		alert("댓글 동록에 성공하였습니당");	
 		modal.find("input").val("");
 		modal.modal("hide");
 		showList(-1);
