@@ -31,9 +31,9 @@ public class ReplyMapperTests {
 
 	@Test
 	public void testCreate() {
-		IntStream.range(1, 10).forEach(i -> {
+		IntStream.range(1, 100).forEach(i -> {
 			ReplyVO vo = new ReplyVO();
-			vo.setBno((i + 60L));
+			vo.setBno((201L));
 			vo.setReply("답변 내용" + i);
 			vo.setReplyer("답변 작성자" + i);
 			mapper.insert(vo);
@@ -73,13 +73,13 @@ public class ReplyMapperTests {
 	public void testGetList() {
 		Criteria criteria  = new Criteria();
 		List<ReplyVO> list =  
-				mapper.getListWithPaging(criteria, 45L);
+				mapper.getListWithPaging(criteria, 201L);
 		list.forEach(reply -> log.info(reply));
 		
 	}
 	@Test
 	public void testGetList2() {
-		Criteria criteria  = new Criteria(2,10);
+		Criteria criteria  = new Criteria(3,10);
 		List<ReplyVO> list =  
 				mapper.getListWithPaging(criteria, 201L);
 		list.forEach(reply -> log.info(reply));
@@ -88,7 +88,7 @@ public class ReplyMapperTests {
 	
 	@Test
 	public void testGetCountByBno() {
-		mapper.getCountByBno(45L);
+		mapper.getCountByBno(201L);
 	}
 
 }
